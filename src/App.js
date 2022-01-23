@@ -1,23 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Link, Outlet } from "react-router-dom";
 
 function App() {
+  document.title = "Component Library"
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="header_container">
+      <Link to="/" className="main_header">
+        Component Library
+      </Link>{" "}
+      <nav className="all-container">
+        <Link className="child" to="/cards">
+          Cards
+        </Link>
+        <Link className="child" to="/chips">
+          Chips
+        </Link>
+        <Link className="child" to="/drawer">
+          Drawer
+        </Link>
+        <Link className="child" to="/badges">
+          Badges
+        </Link>
+        <Link className="child" to="/header">
+          Header
+        </Link>
+        <Link className="child" to="/snackbar">
+          Snackbar
+        </Link>
+        <Link className="child" to="/dialogs">
+          Dialogs
+        </Link>
+        <Link className="child" to="/tabs">
+          Tabs
+        </Link>
+      </nav>
+      <hr />
+      <Outlet />
+      {/* <span className="theme-icon">
+            <input
+              className="check"
+              id="toggle"
+              type="checkbox"
+              onChange={() =>
+                !document.body.classList.contains("dark-theme")
+                  ? document.body.classList.toggle("dark-theme")
+                  : document.body.classList.remove("dark-theme")
+              }
+            />
+            <label for="toggle" className="button"></label>
+          </span> */}
     </div>
   );
 }

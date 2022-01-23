@@ -1,38 +1,786 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --primary-background-color: #ecfeff;
+  --main-heading-color: #67e8f9;
+  --primary-background-color-dark: #164e63;
+  --main-heading-color-dark: #164e63;
+  --card-background-color: white;
+  --hover-background-color: #f1f5f9;
+  --primary-color: #0ea5e9;
+  --container-shadow: rgb(192, 192, 192);
+  --primary-color: ;
+}
+.dark-theme {
+  color: white;
+  --primary-background-color: var(--primary-background-color-dark);
+  --main-heading-color: var(--main-heading-color-dark);
+  --card-background-color: #0891b2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+  background-color: var(--primary-background-color);
+}
+/* Main Heading */
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main_header {
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  width: 100%;
+  padding: 8px 16px;
+  letter-spacing: 1px;
+  background-image: var(--primary-background-color);
+
+  text-decoration: none;
+  color: var(--main-heading-color-dark);
+}
+/* Dark theme switch */
+
+.theme-icon {
+  margin-left: auto;
+  padding-right: 2rem;
+  text-align: end;
+}
+
+.theme-icon .toggle {
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+}
+.check {
+  display: none;
+}
+.button {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 25px;
+}
+.button::before,
+.button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  cursor: pointer;
+}
+.button::before {
+  width: 100%;
+  height: 100%;
+  /* background-color: var(--primary-background-color-dark); */
+  background-color: var(--primary-background-color);
+  border-radius: 25px;
+  border: 1px solid #333;
+  transition: background-color 0.3s ease;
+}
+.button::after {
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--primary-background-color);
+  box-shadow: 0px 0px 5px 1px #000;
+  transition: left 0.3s ease;
+}
+.check:checked + .button::before {
+  /* background-color: var(--primary-background-color); */
+  background-color: var(--primary-background-color-dark);
+}
+.check:checked + .button::after {
+  background-color: var(--primary-background-color);
+  left: 75%;
+}
+/* Dark theme switch */
+
+/* Main Heading */
+
+/* All container */
+
+.all-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 2rem 1rem;
+  /* border: 1px solid gray; */
+  border-radius: 10px;
+}
+
+hr {
+  border: 0.5px solid #164e63;
+  border-bottom: none;
+  box-shadow: 0px 1px 6px 1px #cbd5e1;
+  margin: 0px 30px;
+}
+
+.child {
+  padding: 6px 12px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0891b2;
+  color: aliceblue;
+  border-radius: 20px;
+  box-shadow: 0px 1px 5px 2px #000;
+  margin: 12px 8px;
+}
+.child:hover {
+  background-color: #155e75;
+}
+
+.output {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-container {
+  display: grid;
+  width: 100%;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+}
+@media screen and (max-width: 1080px) {
+  .cards-container {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+}
+@media screen and (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Card Container */
+
+/* First Card */
+.card-one {
+  width: 320px;
+  background-color: var(--card-background-color);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px -5px var(--container-shadow);
+}
+
+.card-one:hover{
+  
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.01); 
+}
+
+.card-one .card-image {
+  width: 320px;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+}
+
+h3,
+small,
+p {
+  padding: 5px 12px;
+}
+.card-one-text .title {
+  font-weight: bold;
+}
+.card-one-text .courtesy {
+  font-size: 0.8rem;
+  opacity: 0.5;
+  font-weight: bolder;
+}
+.card-one-text .description {
+  font-size: 0.9rem;
+  /* opacity: 0.7; */
+}
+
+.card-one-body:hover {
+  border-radius: 10px 10px 0 0;
+  filter: brightness(98%);
+  cursor: pointer;
+  opacity: 0.9;
+}
+.card-one-btn-section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 5px 12px;
+}
+
+.card-one-btn-section .actions {
+  margin-left: auto;
+}
+
+.card-one-btn-section .main-btn {
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: var(--primary-color);
+  border-radius: 10px;
+  padding: 2px 5px;
+}
+.card-one-btn-section .main-btn:hover {
+  cursor: pointer;
+  background-color: var(--hover-background-color);
+  border-radius: 10px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.card-one-btn-section .actions .action-btns {
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  background-color: white;
+  padding: 5px 12px;
+}
+
+.card-one-btn-section .actions .action-btns:hover {
+  cursor: pointer;
+  background-color: var(--hover-background-color);
+  border-radius: 50%;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.card-one-btn-section .main-btn:nth-child(2) {
+  margin-left: 6px;
+}
+
+/* First Card */
+
+/* Second Card */
+
+.card-two {
+  width: 320px;
+  background-color: var(--card-background-color);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px -5px var(--container-shadow);
+}
+
+.card-two .card-image {
+  width: 320px;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+}
+
+h3,
+small,
+p {
+  padding: 5px 12px;
+}
+.card-two-text .title {
+  font-weight: bold;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.card-two-text .courtesy {
+  color: white;
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+.card-two-text .description {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  /* opacity: 0.7; */
+}
+.card-two-text {
+  margin-top: -4.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-two-body:hover {
+  border-radius: 10px 10px 0 0;
+  filter: brightness(98%);
+  cursor: pointer;
+  opacity: 0.9;
 }
+.card-two-btn-section {
+  display: flex;
+  padding: 5px 12px;
+}
+
+.card-two-btn-section .actions {
+  margin-left: auto;
+}
+
+.card-two-btn-section .main-btn {
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: var(--primary-color);
+  border-radius: 10px;
+  padding: 2px 5px;
+}
+.card-two-btn-section .main-btn:hover {
+  cursor: pointer;
+  background-color: var(--hover-background-color);
+  border-radius: 10px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.card-two-btn-section .actions .action-btns {
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  background-color: white;
+  padding: 5px 12px;
+}
+
+.card-two-btn-section .actions .action-btns:hover {
+  cursor: pointer;
+  background-color: var(--hover-background-color);
+  border-radius: 50%;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.card-two-btn-section .main-btn:nth-child(2) {
+  margin-left: 6px;
+}
+/* Second Card */
+
+/* Third Card */
+.card-three {
+  width: 320px;
+  background-color: var(--card-background-color);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px -5px var(--container-shadow);
+  /* height: 400px; */
+}
+
+.card-three .card-image {
+  width: 320px;
+  height: 200px;
+}
+
+h3,
+small,
+p {
+  padding: 5px 12px;
+}
+.card-three-text .title {
+  font-weight: bold;
+  color: white;
+}
+.card-three-text .courtesy {
+  color: white;
+  font-size: 0.8rem;
+  opacity: 0.5;
+  font-weight: bolder;
+}
+.card-three-text .description {
+  font-size: 0.9rem;
+  /* opacity: 0.7; */
+}
+
+.card-three-body:hover {
+  border-radius: 10px 10px 0 0;
+  filter: brightness(98%);
+  cursor: pointer;
+  opacity: 0.9;
+}
+.card-three-btn-section {
+  display: flex;
+  padding: 5px 12px;
+}
+
+.card-three-btn-section .actions {
+  margin-left: auto;
+}
+
+.card-three-btn-section .main-btn {
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: var(--primary-color);
+  border-radius: 10px;
+  padding: 2px 5px;
+}
+.card-three-btn-section .main-btn:hover {
+  cursor: pointer;
+  background-color: var(--hover-background-color);
+  border-radius: 10px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.card-three-btn-section .actions .action-btns {
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  background-color: white;
+  padding: 5px 12px;
+}
+
+.card-three-btn-section .actions .action-btns:hover {
+  cursor: pointer;
+  background-color: var(--hover-background-color);
+  border-radius: 50%;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.card-three-btn-section .main-btn:nth-child(2) {
+  margin-left: 6px;
+}
+
+/* Third Card */
+
+/* Fourth Card */
+
+.card-four {
+  width: 320px;
+  background-color: var(--card-background-color);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px -5px var(--container-shadow);
+}
+
+.card-four .card-image {
+  width: 320px;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-four-text .title {
+  font-weight: bold;
+}
+.card-four-text .courtesy {
+  font-size: 0.8rem;
+  opacity: 0.5;
+  font-weight: bolder;
+}
+.card-four-text .description {
+  font-size: 0.9rem;
+  /* opacity: 0.7; */
+}
+
+.card-four-body:hover {
+  border-radius: 10px 10px 0 0;
+  filter: brightness(98%);
+  cursor: pointer;
+  opacity: 0.9;
+}
+.card-four-btn-section {
+  display: flex;
+  padding: 5px 12px;
+}
+
+.card-four-btn-section .actions {
+  margin-left: auto;
+}
+
+.card-four-btn-section .main-btn {
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: var(--primary-color);
+  border-radius: 10px;
+  padding: 2px 5px;
+}
+.card-four-btn-section .main-btn:hover {
+  cursor: pointer;
+  background-color: var(--hover-background-color);
+  border-radius: 10px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.card-four-btn-section .actions .action-btns {
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  background-color: white;
+  padding: 5px 12px;
+}
+
+.card-four-btn-section .actions .action-btns:hover {
+  cursor: pointer;
+  background-color: var(--hover-background-color);
+  border-radius: 50%;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.card-four-btn-section .main-btn:nth-child(2) {
+  margin-left: 6px;
+}
+
+/* Fourth Card */
+
+/* Fifth Card */
+
+.card-fifth {
+  width: 320px;
+  background-color: var(--card-background-color);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px -5px var(--container-shadow);
+}
+.card-fifth .card-image {
+  width: 320px;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-fifth-text .title {
+  font-weight: bold;
+}
+.card-fifth-text .courtesy {
+  font-size: 0.8rem;
+  opacity: 0.5;
+  font-weight: bolder;
+}
+.card-fifth-text .description {
+  font-size: 0.9rem;
+  /* opacity: 0.7;  */
+}
+
+.card-fifth-body:hover {
+  border-radius: 10px 10px 0 0; filter: brightness(98%);
+  cursor: pointer;
+  opacity: 0.9;
+}
+.card-fifth-btn-section {
+  display: flex;
+  padding: 5px 12px;
+}
+
+.card-fifth-btn-section .actions {
+  margin-left: auto;
+}
+
+.card-fifth-btn-section .main-btn {
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: var(--primary-color);
+  border-radius: 10px;
+  padding: 2px 5px;
+}
+.card-fifth-btn-section .main-btn:hover {
+  cursor: pointer;
+  background-color: var(--hover-background-color);
+  border-radius: 10px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.card-fifth-btn-section .actions .action-btns {
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  background-color: white;
+  padding: 5px 12px;
+}
+
+.card-fifth-btn-section .actions .action-btns:hover {
+  cursor: pointer;
+  background-color: var(--hover-background-color);
+  border-radius: 50%;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.card-fifth-btn-section .main-btn:nth-child(2) {
+  margin-left: 6px;
+}
+
+/* Fifth Card */
+
+/* Sixth Card */
+
+.card-six {
+  width: 320px;
+  background-color: var(--card-background-color);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px -5px var(--container-shadow);
+}
+
+.card-six .card-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px 0 0 0;
+}
+
+.card-six-body {
+  display: flex;
+}
+
+h3,
+small,
+p {
+  padding: 5px 12px;
+}
+.card-six-text .title {
+  font-weight: bold;
+}
+.card-six-text .courtesy {
+  font-size: 0.8rem;
+  opacity: 0.5;
+  font-weight: bolder;
+}
+.card-six-text .description {
+  font-size: 0.9rem;
+  /* opacity: 0.7; */
+}
+
+.card-six-body:hover {
+  border-radius: 10px 10px 0 0;
+  filter: brightness(98%);
+  cursor: pointer;
+  opacity: 0.9;
+}
+.card-six-btn-section {
+  display: flex;
+  padding: 5px 12px;
+}
+
+.card-six-btn-section .actions {
+  margin-left: auto;
+}
+
+.card-six-btn-section .main-btn {
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: var(--primary-color);
+  border-radius: 10px;
+  padding: 2px 5px;
+}
+.card-six-btn-section .main-btn:hover {
+  cursor: pointer;
+  background-color: var(--hover-background-color);
+  border-radius: 10px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.card-six-btn-section .actions .action-btns {
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  background-color: white;
+  padding: 5px 12px;
+}
+
+.card-six-btn-section .actions .action-btns:hover {
+  cursor: pointer;
+  background-color: var(--hover-background-color);
+  border-radius: 50%;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.card-six-btn-section .main-btn:nth-child(2) {
+  margin-left: 6px;
+}
+
+/* Sixth Card */
+
+/* Card Container */
+
+/* Chip */
+
+.chips-container{
+  max-width: 900px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 4rem auto;
+  padding: 12px 8px;
+  display: flex;
+  box-shadow: 2px 2px 4px 2px rgb(167, 167, 167);
+}
+
+.chip{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 8px;
+  background-color: #cbd5e1;
+  margin: 0rem 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 1px 4px 2px rgb(167, 167, 167);
+}
+
+.chip:hover{
+  -ms-transform: scale(1.01); /* IE 9 */
+  -webkit-transform: scale(1.01); /* Safari 3-8 */
+  transform: scale(1.01); 
+}
+
+.close-icon{
+  cursor: pointer;
+  border-radius: 50%;
+  margin-left: 0.3rem;
+  font-size: 1.3rem;
+}
+
+.close-icon:hover{
+color: #f87171;
+}
+
+.type-chip{
+  margin-left: 1rem;
+  border-radius: 0.5rem;
+  padding: 6px 8px;
+  outline: none;
+  border: none;
+}
+
+/* Chip */
+
+/* Drawer */
+
+.drawer-container{
+  width: 250px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 12px 8px;
+  box-shadow: 1px 2px 4px 1px rgba(189, 189, 189);
+}
+
+.drawer-title{
+  padding: 0px 10px;
+}
+
+
+.options{
+  margin-top: 10px;
+  
+}
+.option{
+  display: grid;
+  grid-template-columns: 40px 210px;
+  margin-bottom: 0.5rem;
+  padding: 10px 5px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.option-icon{
+margin-left: 0.6rem;
+margin-top: 2px;
+}
+.option:last-child{
+  margin-bottom: 0;
+
+}
+.option:hover{
+  background-color: #cbd5e1;
+}
+
+.active{
+  background-color: #0284c7;
+  color: white;
+}
+ .active:hover{
+  background-color: #0284c7;
+}
+
+
+/* Drawer */
+
