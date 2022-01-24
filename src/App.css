@@ -793,7 +793,7 @@ p {
   height: 30rem;
 }
 
-.sticky-text{
+.sticky-text {
   position: sticky;
   top: 0;
   background-color: rgb(255, 255, 255);
@@ -851,7 +851,6 @@ p {
   padding-top: 10px;
 
   color: #b3b3b3;
-  
 }
 
 .main-section {
@@ -890,13 +889,9 @@ p {
   /* background: #555; */
 }
 
-
 /* Permanent Drawer */
 
-
 /* Dissmissable permanent drawer */
-
-
 
 /* Dissmissable permanent drawer */
 
@@ -916,13 +911,11 @@ p {
   padding: 1rem;
 }
 
-
 /* badge 1 */
 
-.badge1 p{
+.badge1 p {
   font-size: 1.1rem;
   display: inline;
-
 }
 .sm-badge {
   padding: 0.15rem 0.4rem;
@@ -936,15 +929,13 @@ p {
   left: -10px;
 }
 
-
 /* badge 1 */
 
 /* badge 2 */
 
-.badge2 p{
+.badge2 p {
   font-size: 1.1rem;
   /* display: inline; */
-
 }
 .lg-badge {
   padding: 0.5rem 1rem;
@@ -958,12 +949,11 @@ p {
   left: -10px;
 }
 
-
 /* badge 2 */
 
 /* badge 3 */
 
-.badge3 .sm-left-badge{
+.badge3 .sm-left-badge {
   padding: 0.15rem 0.4rem;
   color: var(--text-white);
   border-radius: 50%;
@@ -975,14 +965,15 @@ p {
   left: 10px;
 }
 
-.badge3 .button1{
+.badge3 .button1 {
   padding: 8px 12px;
   color: black;
   background-color: var(--primary-color);
   border-radius: 5px;
   border: 1px solid rgb(56, 188, 240);
+  box-shadow: 1px 2px 4px 2px rgb(167, 167, 167);
 }
-.badge3 .button1:hover{
+.badge3 .button1:hover {
   background-color: #0891b2;
   transition: all 0.3s ease;
 }
@@ -991,7 +982,7 @@ p {
 
 /* badge 4 */
 
-.badge4 .sm-left-badge{
+.badge4 .sm-left-badge {
   padding: 0.15rem 0.4rem;
   color: var(--text-white);
   border-radius: 50%;
@@ -1003,19 +994,20 @@ p {
   left: 10px;
 }
 
-.badge4 .sm-left-badge.hide{
+.badge4 .sm-left-badge.hide {
   opacity: 0;
 }
 
-.badge4 .button2{
+.badge4 .button2 {
   padding: 8px 12px;
   color: black;
   background-color: white;
   border-radius: 5px;
   border: 1px solid rgb(12, 27, 32);
+  box-shadow: 1px 2px 4px 2px rgb(167, 167, 167);
 }
 
-.badge4 .button2:hover{
+.badge4 .button2:hover {
   background-color: #dae9ec;
   transition: all 0.3s ease;
 }
@@ -1023,7 +1015,7 @@ p {
 
 /* badge 5 */
 
-.badge5 .sm-right-badge{
+.badge5 .sm-right-badge {
   padding: 0.15rem 0.4rem;
   color: var(--text-white);
   border-radius: 50%;
@@ -1035,11 +1027,280 @@ p {
   left: -12px;
 }
 
-
 /* badge 5 */
-
-
 
 /* Badges */
 
+/* Headers */
 
+/* Header 1 */
+
+.header-1-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 750px;
+  height: 22rem;
+  overflow-y: scroll;
+  box-shadow: 1px 2px 4px 2px rgb(167, 167, 167);
+  background-color: white;
+  border-radius: 10px;
+}
+
+.header-1-container .headers-1 {
+  position: sticky;
+  top: 0;
+  height: 65px;
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  padding: 20px;
+}
+
+.header1-name {
+  font-size: 1rem;
+  flex-grow: 1;
+}
+
+.action-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+.action-icons .icon-child {
+  /* margin: 0px 10px; */
+  margin-left: 10px;
+  padding: 0px 10px;
+}
+
+.action-icons .icon-child:hover{
+  background-color: rgb(0, 157, 209);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.header1-ham {
+  margin-right: 10px;
+  padding: 0px 10px;
+}
+
+.header1-ham:hover {
+  background-color: rgb(0, 157, 209);
+  border-radius: 50%;
+  cursor: pointer;
+}
+/* Header 1 */
+
+/* Header 2 */
+.header-2-container {
+  box-shadow: 1px 2px 4px 2px rgb(167, 167, 167);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 750px;
+  height: 22rem;
+  overflow-y: scroll;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.header-2-container .headers-2 {
+  position: sticky;
+  top: 0;
+  width: 120px;
+  height: 65px;
+  background-color: var(--primary-color);
+  border-bottom-right-radius: 10px;
+  box-shadow: 1px 3px 4px 2px rgb(167, 167, 167);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+
+.header2-ham, .headers-2 .icon-child{
+  padding: 0px 5px;
+  margin-left: 5px;
+  border-radius: 50%;
+}
+
+.headers-2 .icon-child:hover, .header2-ham:hover{
+  
+  background-color: rgb(0, 157, 209);
+  /* border-radius: 50%; */
+  cursor: pointer;
+}
+
+
+/* Header 2 */
+
+/* Header 3 */
+
+.header-3-container {
+  max-width: 750px;
+  height: 22rem;
+  overflow-y: scroll;
+  background-color:white;
+  border-radius: 10px;
+  box-shadow: 1px 2px 4px 2px rgb(167, 167, 167);
+}
+
+.header-3-container p {
+  padding: 1rem;
+}
+
+.headers-3{
+  height: 100px;
+  background-color: var(--primary-color);
+  color: white;
+
+  display: flex;
+  align-items: flex-start;
+}
+
+.header3-name {
+  font-size: 1rem;
+  flex: 1;
+  margin: 1rem;
+  align-self: flex-end;
+}
+.header3-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+.header3-icons .icon-child {
+  /* margin: 0px 10px; */
+  margin-left: 10px;
+  padding: 0px 10px;
+}
+
+.header3-icons .icon-child:hover{
+  background-color: rgb(0, 157, 209);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Header 3 */
+
+/* Headers */
+
+/* Snackbars */
+
+/* Snackbar 1 */
+.window-for-snackbars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+.window-for-snackbars.hide{
+opacity: 0;
+transition: all 0.3s ease-in;
+}
+
+.snackbar1{
+  position: fixed;
+  bottom: 1rem;
+  max-width: 30rem;
+  height: 4rem;
+  padding: 0.1rem 0.3rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 5px 10px rgb(167, 167, 167);
+  /*  */
+  background-color: #1e293b;
+  color: white;
+}
+
+.snackbar1 span, .snackbar2 span, .snackbar3 p{
+  margin: 0px 20px;
+}
+
+.snackbar1 button, .snackbar2 button, .snackbar3 button{
+  color: rgb(165, 10, 226);
+  margin: 0 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.snackbar1 button:hover, .snackbar2 button:hover, .snackbar3 button:hover{
+  background-color: #121822;
+}
+
+.snackbar1 .close-icon, .snackbar2 .close-icon, .snackbar3 .close-icon{
+  padding: 5px;
+  
+}
+.snackbar1 .close-icon:hover, .snackbar2 .close-icon:hover, .snackbar3 .close-icon:hover{
+  filter: brightness(95%);
+  background-color: #272626;
+}
+
+/* Snackbar 1 */
+
+
+/* Snackbar 2 */
+
+.snackbar2{
+  position: fixed;
+  display: flex;
+  height: 4rem;
+  width: 30rem;
+  bottom: 1rem;
+  left: 1rem;
+  margin: auto;
+  justify-content: s;
+  align-items: center;
+  background-color: #1e293b;
+  font-weight: 400;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 1px 4px 4px rgb(151, 150, 150);
+}
+
+/* Snackbar 2 */
+
+/* Snackbar 3 */
+
+.snackbar3{
+  position: fixed;
+  bottom: 1rem;
+  max-width: 40rem;
+  height: 5rem;
+  padding: 0.1rem 0.3rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 0 5px 10px rgb(167, 167, 167);
+  background-color: #1e293b;
+  color: white;
+}
+
+.snackbar3-icons{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
+}
+
+/* Snackbar 3 */
+
+
+/* Snackbars */

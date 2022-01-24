@@ -17,6 +17,14 @@ import Drawer1 from "./components/Drawer/Drawer1";
 import Drawer2 from "./components/Drawer/Drawer2";
 import Drawer3 from "./components/Drawer/Drawer3";
 import Badge from "./components/Badge/Badge";
+import Headers from "./components/Header/Headers";
+import Header1 from "./components/Header/Header1";
+import Header2 from "./components/Header/Header2";
+import Header3 from "./components/Header/Header3";
+import Snackbars from "./components/Snackbar/Snackbars"
+import Snackbar1 from "./components/Snackbar/Snackbar1"
+import Snackbar2 from "./components/Snackbar/Snackbar2"
+import Snackbar3 from "./components/Snackbar/Snackbar3"
 
 ReactDOM.render(
   <BrowserRouter>
@@ -52,7 +60,33 @@ ReactDOM.render(
             }
           />
         </Route>
-        <Route path="badges" element={<Badge/>}/>
+        <Route path="badges" element={<Badge />} />
+        <Route path="header" element={<Headers />}>
+          <Route path="header1" element={<Header1 />} />
+          <Route path="header2" element={<Header2 />} />
+          <Route path="header3" element={<Header3 />} />
+          <Route
+            path="*"
+            element={
+              <main className="output">
+                <h2>There's nothing here buddy!</h2>
+              </main>
+            }
+          />
+        </Route>
+        <Route path="snackbar" element={<Snackbars/>}>
+            <Route path = "snackbar1" element={<Snackbar1/>}></Route>
+            <Route path = "snackbar2" element={<Snackbar2/>}></Route>
+            <Route path = "snackbar3" element={<Snackbar3/>}></Route>
+            <Route
+            path="*"
+            element={
+              <main className="output">
+                <h2>There's nothing here buddy!</h2>
+              </main>
+            }
+          />
+        </Route>
         <Route
           path="*"
           element={

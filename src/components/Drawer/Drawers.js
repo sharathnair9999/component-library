@@ -11,9 +11,6 @@ const Drawers = () => {
         <Link className="child" to="/drawer/drawer2">
           Permanent Drawer
         </Link>
-        {/* <Link className="child" to="/drawer/drawer3">
-          Dismissable Drawer
-        </Link> */}
       </nav>{" "}
       <Outlet />
     </div>
