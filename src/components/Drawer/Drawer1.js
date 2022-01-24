@@ -7,8 +7,10 @@ const Drawer1 = () => {
   return (
     <div className="output">
       <div className=" drawer-container">
-        <h2 className="drawer-title">Title</h2>
-        <small className="drawer-subtext">Subtext</small>
+      <div className="sticky-text">
+            <h2 className="drawer-title">Title</h2>
+            <small className="drawer-subtext">Subtext</small>
+          </div>
         <div className="options">
           <div className="option active">
             <FaInbox size="1.2rem" className="option-icon" />

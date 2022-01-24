@@ -15,6 +15,8 @@ import Card6 from "./components/Card/Card6";
 import Drawers from "./components/Drawer/Drawers";
 import Drawer1 from "./components/Drawer/Drawer1";
 import Drawer2 from "./components/Drawer/Drawer2";
+import Drawer3 from "./components/Drawer/Drawer3";
+import Badge from "./components/Badge/Badge";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -40,6 +42,7 @@ ReactDOM.render(
         <Route path="drawer" element={<Drawers />}>
           <Route path="drawer1" element={<Drawer1 />} />
           <Route path="drawer2" element={<Drawer2 />} />
+          <Route path="drawer3" element={<Drawer3 />} />
           <Route
             path="*"
             element={
@@ -49,6 +52,7 @@ ReactDOM.render(
             }
           />
         </Route>
+        <Route path="badges" element={<Badge/>}/>
         <Route
           path="*"
           element={

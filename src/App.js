@@ -34,7 +34,7 @@ function App() {
           Tabs
         </Link>
       </nav>
-      <hr />
+      <hr className="main-hr" />
       <Outlet />
       {/* <span className="theme-icon">
             <input
