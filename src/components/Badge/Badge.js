@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { ImHome } from "react-icons/im";
 
 const Badge = () => {
+  document.title = "Badge"
   const [isActive, setActive] = useState(false);
 
   const toggleClass = () => {
