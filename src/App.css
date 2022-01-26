@@ -936,7 +936,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2rem auto;
+  /* margin: 2rem 1rem; */
 }
 
 .window-for-snackbars.hide {
@@ -958,19 +958,28 @@ p {
   /*  */
   background-color: #1e293b;
   color: white;
+  margin: 0rem 2rem;
+}
+
+.snackbar-btns{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
 }
 
 .snackbar1 span,
 .snackbar2 span,
 .snackbar3 p {
-  margin: 0px 20px;
+  margin: 10px 10px;
+  font-size: 0.8rem;
 }
 
 .snackbar1 button,
 .snackbar2 button,
 .snackbar3 button {
   color: rgb(165, 10, 226);
-  margin: 0 10px;
+  /* margin: 0 10px; */
   background-color: transparent;
   border: none;
   font-size: 1rem;
@@ -1005,12 +1014,13 @@ p {
   position: fixed;
   display: flex;
   height: 4rem;
-  width: 30rem;
+  max-width: 30rem;
   bottom: 1rem;
-  left: 1rem;
-  margin: auto;
+  left: 0rem;
+  margin: auto 1rem;
   justify-content: s;
   align-items: center;
+  /* margin: 0rem 2rem; */
   background-color: #1e293b;
   font-weight: 400;
   color: white;
@@ -1025,17 +1035,17 @@ p {
 .snackbar3 {
   position: fixed;
   bottom: 1rem;
-  max-width: 40rem;
-  height: 5rem;
+  max-width: 25rem;
   padding: 0.1rem 0.3rem;
   border-radius: 5px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   box-shadow: 0 5px 10px rgb(167, 167, 167);
   background-color: #1e293b;
   color: white;
+  /* margin: 0rem 1rem; */
 }
 
 .snackbar3-icons {
@@ -1043,6 +1053,7 @@ p {
   justify-content: flex-end;
   align-items: center;
   margin-left: auto;
+  /* margin-bottom: 1rem; */
 }
 
 /*------------------------------------------------ Snackbar 3 ------------------------------------------------*/

@@ -11,8 +11,11 @@ const Snackbar2 = () => {
     <div className={`window-for-snackbars  ${isActive ? "hide" : null}`}>
       <div className="snackbar2">
         <span>Can't send photo. Retry in 5 seconds.</span>
+        <div className="snackbar-btns">
         <button>RETRY</button>
         <IoMdClose onClick={toggleClass} className="close-icon" size={"2rem"} />
+
+        </div>
       </div>
     </div>
   );
