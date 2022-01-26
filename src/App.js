@@ -7,6 +7,7 @@ function App() {
     <div className="header_container">
       <Link to="/" className="main_header">
         Component Library
+      <hr/>
       </Link>{" "}
       <nav className="all-container">
         <Link className="child" to="/cards">

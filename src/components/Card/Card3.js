@@ -22,18 +22,18 @@ const Card3 = () => {
     </div>
   </div>
   <div className="card-three-btn-section">
-    <button className="main-btn">Read</button>
-    <button className="main-btn">Bookmark</button>
+    <span className="main-btn">Read</span>
+    <span className="main-btn">Bookmark</span>
     <div className="actions">
-      <button className="action-btns">
+      <span className="action-btns">
         <FaRegHeart />
-      </button>
-      <button className="action-btns">
+      </span>
+      <span className="action-btns">
         <FiShare2 />
-      </button>
-      <button className="action-btns">
+      </span>
+      <span className="action-btns">
         <FiMoreVertical />
-      </button>
+      </span>
     </div>
   </div>
 </div>;

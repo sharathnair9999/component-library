@@ -6,12 +6,9 @@ const Header2 = () => {
     <div className="output">
       <div className="header-2-container">
         <nav className="headers-2">
-          <GiHamburgerMenu size={"3rem"} className="header2-ham" />
+          <span className="icon-child"><GiHamburgerMenu size={"1.5rem"} /></span>
 
-          <BsFillBookmarkFill
-            size={"3rem"}
-            className="icon-child"
-          ></BsFillBookmarkFill>
+          <span className="icon-child"><BsFillBookmarkFill size={"1.5rem"}/></span>
         </nav>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt,

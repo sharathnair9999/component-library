@@ -21,10 +21,17 @@ import Headers from "./components/Header/Headers";
 import Header1 from "./components/Header/Header1";
 import Header2 from "./components/Header/Header2";
 import Header3 from "./components/Header/Header3";
-import Snackbars from "./components/Snackbar/Snackbars"
-import Snackbar1 from "./components/Snackbar/Snackbar1"
-import Snackbar2 from "./components/Snackbar/Snackbar2"
-import Snackbar3 from "./components/Snackbar/Snackbar3"
+import Snackbars from "./components/Snackbar/Snackbars";
+import Snackbar1 from "./components/Snackbar/Snackbar1";
+import Snackbar2 from "./components/Snackbar/Snackbar2";
+import Snackbar3 from "./components/Snackbar/Snackbar3";
+import Dialogs from "./components/Dialogs/Dialogs";
+import Dialog1 from "./components/Dialogs/Dialog1";
+import Dialog2 from "./components/Dialogs/Dialog2";
+import Tabs from "./components/Tabs/Tabs";
+import Tab1 from "./components/Tabs/Tab1";
+import Tab2 from "./components/Tabs/Tab2";
+import Tab3 from "./components/Tabs/Tab3";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -74,11 +81,11 @@ ReactDOM.render(
             }
           />
         </Route>
-        <Route path="snackbar" element={<Snackbars/>}>
-            <Route path = "snackbar1" element={<Snackbar1/>}></Route>
-            <Route path = "snackbar2" element={<Snackbar2/>}></Route>
-            <Route path = "snackbar3" element={<Snackbar3/>}></Route>
-            <Route
+        <Route path="snackbar" element={<Snackbars />}>
+          <Route path="snackbar1" element={<Snackbar1 />}></Route>
+          <Route path="snackbar2" element={<Snackbar2 />}></Route>
+          <Route path="snackbar3" element={<Snackbar3 />}></Route>
+          <Route
             path="*"
             element={
               <main className="output">
@@ -86,6 +93,23 @@ ReactDOM.render(
               </main>
             }
           />
+        </Route>
+        <Route path="dialogs" element={<Dialogs />}>
+          <Route path="dialog1" element={<Dialog1 />}></Route>
+          <Route path="dialog2" element={<Dialog2 />}></Route>
+          <Route
+            path="*"
+            element={
+              <main className="output">
+                <h2>There's nothing here buddy!</h2>
+              </main>
+            }
+          ></Route>
+        </Route>
+        <Route path="tabs" element={<Tabs/>}>
+          <Route path="tab1" element={<Tab1/>}></Route>
+          <Route path="tab2" element={<Tab2/>}></Route>
+          <Route path="tab3" element={<Tab3/>}></Route>
         </Route>
         <Route
           path="*"

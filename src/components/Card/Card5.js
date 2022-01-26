@@ -23,15 +23,15 @@ const Card5 = () => {
       <div className="card-fifth-btn-section">
        
         <div className="actions">
-          <button className="action-btns">
+          <span className="action-btns">
             <FaRegHeart />
-          </button>
-          <button className="action-btns">
+          </span>
+          <span className="action-btns">
             <FiShare2 />
-          </button>
-          <button className="action-btns">
+          </span>
+          <span className="action-btns">
             <FiMoreVertical />
-          </button>
+          </span>
         </div>
       </div>
     </div>

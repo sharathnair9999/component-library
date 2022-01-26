@@ -10,7 +10,6 @@ const Chips = () => {
       return alert("Please input some text");
     }
     setChips([...chips, e.target.value])
-    console.log(chips);
     e.target.value = ""
   };
  
