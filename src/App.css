@@ -328,7 +328,9 @@ p {
 .card-two-btn-section .actions .action-btns:hover,
 .card-three-btn-section .actions .action-btns:hover,
 .card-four-btn-section .actions .action-btns:hover,
-.card-fifth-btn-section .actions .action-btns:hover {
+.card-fifth-btn-section .actions .action-btns:hover,
+.card-six-btn-section .actions .action-btns:hover
+ {
   cursor: pointer;
   background-color: var(--hover-background-color);
   transition: background-color 0.2s ease-in-out;
